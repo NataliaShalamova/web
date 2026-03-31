@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио: Шаламова Наталья Вячеславовна</title>
+    <style>
+        :root {
+            --main-bg: #fdfeff;
+            --accent: #4a90e2;
+            --text: #2c3e50;
+            --soft-blue: #eef5ff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--main-bg);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--accent), #67b26f);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .profile-icon {
+            font-size: 80px;
+            margin-bottom: 15px;
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            line-height: 120px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: -40px auto 40px;
+            padding: 0 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            margin-bottom: 25px;
+        }
+
+        h1 {
+            margin: 10px 0;
+            font-size: 28px;
+        }
+
+        h2 {
+            color: var(--accent);
+            border-bottom: 2px solid var(--soft-blue);
+            padding-bottom: 10px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        max-width: 600px { .grid { grid-template-columns: 1fr; } }
+
+        .btn-box {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-weight: bold;
+            margin: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(74, 144, 226, 0.3);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(74, 144, 226, 0.4);
+            background: #357abd;
+        }
+
+        .btn-quest { background: #67b26f; box-shadow: 0 4px 15px rgba(103, 178, 111, 0.3); }
+        .btn-quest:hover { background: #4f9656; }
+
+        .quote {
+            font-style: italic;
+            text-align: center;
+            color: #7f8c8d;
+            margin: 40px 0;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+<img src="для страницы.jpg" 
+     height="370" 
+     width="35%">
+    <h1>Шаламова Наталья Вячеславовна</h1>
+    <p>Инструктор по физической культуре высшей квалификационной категории</p>
+    <p>МДОУ Детский сад № 18, Свердловская область, г. Богданович</p>
+</header>
+
+<div class="container">
+    <div class="card">
+        <h2>Обо мне</h2>
+        <p>Приветствую вас на моей профессиональной странице! Моя главная цель — сделать физкультуру для детей не просто набором упражнений, а увлекательным путешествием в мир здоровья, радости и возможностей своего тела.</p>
+        <div class="grid">
+            <div>
+                <strong>Кредо:</strong> "В здоровом теле — здоровый дух и счастливая улыбка!"
+
+                <p><strong>Специализация:</strong> Нейрогимнастика, использование ИКТ в ДОУ, профилактика нарушений координации и осанки.</p>
+            </div>
+            <div>
+                <strong>Инновационная деятельность:</strong> Разработка интерактивных образовательных веб-квестов и цифровых нейротренажеров для вовлечения семей воспитанников в процесс физического развития.
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Мои цифровые разработки</h2>
+        <p>Для удобства родителей и органи
+
+
+зации эффективных совместных занятий с детьми в домашних условиях, мною разработаны следующие интерактивные инструменты:</p>
+        
+        <div class="btn-box">
+            <a href="trener.html" class="btn">🚀 Открыть Нейротренажер</a>
+            
+            <a href="https://vk.com/away.php?to=https%3A%2F%2Fjoyteka.com%2F101089671&utf=1" target="_blank" class="btn btn-quest">🧩 Пройти Семейный Квест</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Методическая копилка</h2>
+        <ul>
+            <li>Внедрение нейропсихологических подходов в физическое воспитание через цифровую среду.</li>
+            <li>Организация единого образовательного пространства «Детский сад — Семья» средствами геймификации.</li>
+            <li>Цикл интерактивных консультаций для родителей "Растем здоровыми вместе".</li>
+        </ul>
+    </div>
+
+    <p class="quote">"Движение — это жизнь, а правильное движение в детстве — это залог успешного будущего!"</p>
+</div>
+
+</body>
+</html>

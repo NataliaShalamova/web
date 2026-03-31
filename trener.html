@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Нейротренажер</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 400px;
+            border: 4px solid #6c5ce7;
+        }
+        #exercise-title {
+            font-size: 22px;
+            font-weight: bold;
+            color: #6c5ce7;
+            margin-bottom: 15px;
+        }
+        #exercise-desc {
+            font-size: 16px;
+            line-height: 1.5;
+            min-height: 100px;
+            margin-bottom: 20px;
+        }
+        .btn {
+            background: #6c5ce7;
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            font-size: 18px;
+            border-radius: 10px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .btn:active {
+            background: #5b4bc4;
+            transform: scale(0.98);
+        }
+        #counter {
+            margin-top: 15px;
+            color: #888;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div id="exercise-title">Начнем?</div>
+        <div id="exercise-desc">Нажмите кнопку, чтобы получить первое упражнение.</div>
+        
+        <button class="btn" onclick="showNext()">СЛЕДУЮЩЕЕ</button>
+        
+        <div id="counter">Выполнено: 0</div>
+    </div>
+
+    <script>
+        // Массив упражнений
+        const exercises = [
+            { t: "✋ Кулак-Ребро-Ладонь", d: "Постукивайте по столу: кулаком, ребром ладони, всей ладонью. Повторите 5 раз." },
+            { t: "👌 Колечки", d: "Соединяйте по очереди большой палец с указательным, средним, безымянным и мизинцем." },
+            { t: "👂 Ухо-Нос", d: "Левой рукой за кончик носа, правой за левое ухо. Хлопните и поменяйте руки!" },
+            { t: "👍 Во! - Окей", d: "На одной руке 'лайк', на другой 'ОК'. Сменяйте их одновременно." },
+            { t: "🥞 Оладушки", d: "Положите руки на стол. Одна ладонь вверх, другая вниз. Меняйте их одновременно." },
+            { t: "✌️ Зайчик-Коза", d: "Одной рукой покажите ушки зайца, другой - рожки козы. Поменяйте местами." },
+            { t: "🐘 Слон", d: "Рисуйте в воздухе восьмерку всей рукой, прижав ухо к плечу." },
+            { t: "⏳ Восьмерки", d: "Рисуйте в воздухе лежачую восьмерку (бесконечность) большим пальцем руки." },
+            { t: "🔄 Лезгинка", d: "Левая рука в кулак, правая ладонью к мизинцу левой. Меняйте положение рук." },
+            { t: "🎹 Пианино", d: "Постукивайте пальцами по очереди от мизинца к большому и обратно." },
+            { t: "🤞 Крючки", d: "Скрестите руки и ноги, сцепите пальцы в замок и выверните их к груди." },
+            { t: "🐍 Змейка", d: "Сцепите руки в замок, выверните их и попробуйте пошевелить безымянным пальцем." },
+            { t: "🦵 Перекрест", d: "Шагайте на месте, касаясь рукой противоположного колена." },
+            { t: "🌟 Рисование", d: "Попробуйте рисовать в воздухе круг правой рукой и квадрат левой одновременно." },
+            { t: "🧶 Клубок", d: "Вращайте указательные пальцы друг вокруг друга очень быстро." },
+            { t: "👂 Массаж", d: "Разомните ушные раковины сверху вниз 30 секунд." },
+            { t: "👃 Точки", d: "Одной рукой держитесь за пупок, другой массируйте точки под ключицами." },
+            { t: "🦶 Стопа-Кисть", d: "Крутите правой ногой по часовой стрелке, а правой рукой - против." },
+            { t: "🏸 Ножницы", d: "Делайте скрестные движения руками перед собой, меняя ведущую руку." },
+            { t: "🔋 Зарядка", d: "Гладьте живот круговыми движениями, а по голове слегка постукивайте." }
+
+
+];
+
+        let count = 0;
+
+        // Главная функция кнопки
+        function showNext() {
+            const randomIndex = Math.floor(Math.random() * exercises.length);
+            const ex = exercises[randomIndex];
+
+            document.getElementById('exercise-title').innerText = ex.t;
+            document.getElementById('exercise-desc').innerText = ex.d;
+            
+            count++;
+            document.getElementById('counter').innerText = "Выполнено: " + count;
+        }
+    </script>
+
+</body>
+</html>
